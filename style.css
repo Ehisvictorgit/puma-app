@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 header{
     padding-bottom: 5rem;
     background: linear-gradient(130deg,#fdefe9 62%,white 50%);
@@ -16,6 +20,11 @@ nav{
 .gen-layout{
     max-width: 1000px;
     margin: auto;
+}
+
+/* hamburger instruction */
+label, .check_icon{
+    display: none;
 }
 
 .inner-nav{
@@ -189,8 +198,203 @@ nav{
 
 }
 
+.features>h5{
+    color: red;
+    font-size:1.2rem ;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.features>h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.feature-cards-wrapper{
+    display: flex;
+    margin-block:2.5rem;
+    gap:1.8rem;
+
+}
+
+.feature-card{
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: .2rem .3rem 15px rgb(223,220,220);
+    height: 50vh;
+    width: 35%;
+    background-color: #fff;
+}
+
+.feature-card:nth-child(2){
+    background-color: #fdeee7;
+}
+
+.feature-card:nth-child(3){
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feature-card>span{
+    background-color: #e7effc;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height:80px;
+    margin: auto;
+}
+
+.feature-card-content{
+    margin-block: 1rem;
+}
+
+.feature-card-content{
+    margin-block: 1rem;
+}
+
+.feature-card-content>h4{
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.feature-card-content>p{
+    text-align: center;
+    margin-block: 1rem;
+    font-size: 14px;
+}
+
+.feature-card-content>a{
+ display:block;
+ color: red;
+ text-align: center;
+ text-decoration: none;
+}
+
+.feature-card-content>a>span{
+    color:black
+}
+
+/* Responsiveness code */
+
+@media (min-width:320px) and (max-width:460px){
+    .inner-nav{
+        width: calc(100% - 30px);
+    }
+
+    
+    label{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .nav-items{
+        padding:0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-items>a{
+        width: 100%;
+        color: #000;
+        font-size: 18px;
+        padding: 0.6rem;
+        text-align:left;
+        border-bottom: 2px  solid #ee4f0e;
+    }
+
+    .nav-items>a:last-child{
+        margin-bottom: 1.5rem;
+    }
+
+    .nav-right{
+        display: none;
+        position:absolute;
+        width: 340px;
+        padding: 1.8rem;
+        top: 4.4rem;
+        right: 3px;
+        z-index: 1;
+        background-color: #e9eceb;
+        opacity:.97;
+        border-bottom: 4px solid #ee4f0e;
+        opacity:.97;
+        border-bottom: 4px solid #ee4f0e;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0) ;
+
+    }
+
+    #toggle:checked + .nav-right {
+      display: block;
+      transform: none;
+    }
+
+    .banner{
+        width: calc(100% - 30px);
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .banner-content, .banner-image{
+        width: 100%;
+
+    }
+
+    .shoe_details{
+        width: calc(100% - 60px);
+    }
+
+    .shoe_details_card{
+        overflow-x: scroll;
+        gap: 1rem;
+        padding: 1rem;;
+    }
+
+    .about_ads{
+        width: calc(100% - 30px);
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about_content{
+        width: 100%;
+    }
+
+    .about_img_vidz{
+        width: 90%;
+        margin: auto;
+
+    }
+
+    .about_img_vidz>img{
+        margin-left: -1.5rem;
+    }
+
+    .feature{
+        width: calc(100% - 30px);
+    }
+
+    .feature-cards-wrapper{
+        width: 360px;
+        margin: 2rem auto;
+        flex-direction: column;
+    }
+
+    .feature-card{
+        width: 100%;
+    }
+
+    .features>h1{
+        font-size:1.7rem
+    }
 
 
 
 
+}
 
